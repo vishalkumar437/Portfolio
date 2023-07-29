@@ -123,7 +123,7 @@ const ContactForm = () => {
 					</InputField>
 				)}
 				<Center>
-					<Button secondary type="submit" disabled={isSubmitting}>
+					<Button style={{backgroundColor:"red", justifyContent:"center"}} secondary type="submit" disabled={isSubmitting}>
 						Submit
 					</Button>
 				</Center>

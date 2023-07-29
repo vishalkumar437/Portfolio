@@ -12,10 +12,10 @@ function Contact(){
     <Wrapper as={Container} id="contact">
       
       <Details>
-        <ContactForm />
+        <ContactForm/>
       </Details>
       <Thumbnail>
-        <img src={contact} alt="Vishal Working" />
+        <img className='Contact-image' src={contact} alt="Lets Talk" />
       </Thumbnail>
     </Wrapper>
     </div>

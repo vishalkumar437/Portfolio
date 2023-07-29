@@ -21,6 +21,9 @@
 
 
 @media (max-width: 767px) {
+    .About-MainSection{
+      justify-content: center !important;
+    }
     .about-img {
       padding-top: 0 !important;
     }
