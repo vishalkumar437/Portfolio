@@ -63,7 +63,6 @@
 .Landing-sectionA{
     display: flex;
     padding-left: 4%;
-    justify-items: center;
     flex-direction: column;
     justify-content: center; 
     font-family: nothing;
@@ -107,9 +106,9 @@
 }
 
 @media (max-width: 767px) {
-  .Typewriter__wrapper {
+  .Typewriter__wrapper {  
     font-size: 1.4em !important;
-    font-weight: 500 !important;
+    font-weight: 600 !important;
     position: absolute !important;
   }
   .Typewriter__cursor {

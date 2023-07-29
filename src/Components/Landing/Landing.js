@@ -14,7 +14,7 @@ function Landing(){
               </h1>
               <h1 className="heading-name">
                 I'M
-                <strong className="main-name"> VISHAL KUMAR</strong>
+                <strong className="main-name"> VISHAL</strong>
               </h1>
 
             <div style={{color : "#14ffec", padding: 50, textAlign: "left", fontWeight:"bolder" }}>
