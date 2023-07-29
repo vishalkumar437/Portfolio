@@ -8,37 +8,15 @@ import Footer from "./Components/Footer/index";
 
 function App() {
   const [activeComponent, setActiveComponent] = useState("landing");
-  const [isScrolled, setIsScrolled] = useState(false);
+  //const [isScrolled, setIsScrolled] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
 
-    window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
-  useEffect(() => {
-    // Add a class to the body element to hide the scrollbar
-    document.body.classList.add("hide-scrollbar");
-
-    return () => {
-      // Remove the class when the component unmounts
-      document.body.classList.remove("hide-scrollbar");
-    };
-  }, []);
   return (
       <>
         <LightParticle />
-        <Navbar setActiveComponent={setActiveComponent} isScrolled={isScrolled}/>
+        <Navbar setActiveComponent={setActiveComponent} />
           {activeComponent === "landing" && <Landing />}
           {activeComponent === "about" && <About />}
           {activeComponent === "contact" && <Contact />}

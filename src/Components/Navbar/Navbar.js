@@ -9,7 +9,7 @@ const Navbar = ({ setActiveComponent, isScrolled }) => {
 
   return (
     <>
-      <div className={`Nav-MainContainer ${isScrolled ? 'scrolled' : ''}`}>
+      <div className={`Nav-MainContainer ${isScrolled ? 'scrolled' : 'scrolled'}`}>
         <a href="/">
           <img src={logo} alt="Vishal Kumar" className="Nav-logo" />
         </a>
