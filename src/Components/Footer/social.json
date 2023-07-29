@@ -1,0 +1,20 @@
+[
+  {
+    "id": 0,
+    "name": "Telegram",
+    "link": "https://t.me/AliVe_MaN",
+    "icon": "/icons/telegram.svg"
+  },
+  {
+    "id": 1,
+    "name": "Github",
+    "link": "https://github.com/vishalkumar437",
+    "icon": "/icons/github.svg"
+  },
+  {
+    "id": 2,
+    "name": "Twitter",
+    "link": "https://twitter.com/",
+    "icon": "/icons/twitter.svg"
+  }
+]

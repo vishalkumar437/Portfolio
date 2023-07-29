@@ -1,0 +1,73 @@
+/* Navbar.css */
+
+.Nav-MainContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1%;
+    height: 12vh;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff; /* Add a background color to the navbar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a shadow for a better visual effect */
+    z-index: 999; /* Ensure the navbar is on top of other elements */
+    opacity: 0; /* Initially set the opacity to 0 */
+    animation: fadeIn 1s ease-in-out forwards; /* Apply the fadeIn animation */
+  }
+  
+  /* Keyframes for fadeIn animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0; /* Start with opacity 0 */
+    }
+    to {
+      opacity: 1; /* End with opacity 1 */
+    }
+  }
+  
+  .Nav-Container {
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 12px;
+    color: gray;
+    align-items: center;
+    flex-grow: 0.3;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-variant: small-caps;
+    font-weight: bold;
+  }
+
+  .Nav-MainContainer.scrolled {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1%;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.8); /* Use an RGBA color to set the background with transparency */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0px); /* Add the backdrop filter with blur */
+    z-index: 999;
+    opacity: 1;
+  }
+  
+  .Nav-logo {
+    padding: 15%;
+    width: 80px;
+    height: 80px;
+    display: block;
+    mix-blend-mode: multiply;
+  }
+  
+  /* Hover effect for navigation links */
+  .Nav-Container div {
+    cursor: pointer;
+    transition: color 0.2s ease-in-out; /* Smoothly transition the color change */
+  }
+  
+  .Nav-Container div:hover {
+    color: #000; /* Change the color to black when hovering over a link */
+  }
+  
