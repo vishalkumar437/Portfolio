@@ -1,6 +1,5 @@
 import {React,useRef} from "react";
 import { Formik, Form, FastField, ErrorMessage } from "formik";
-import Recaptcha from "react-google-recaptcha";
 import * as Yup from "yup";
 import { Button } from "../../common/button/index";
 import { Input } from "../../common/Input/index";
@@ -26,11 +25,8 @@ const ContactForm = () => {
 			user_email: Yup.string()
 				.email("Invalid email")
 				.required("Email field is required"),
-			message: Yup.string().required("Message field is required"),
-			recaptcha:
-				process.env.NODE_ENV !== "development"
-					? Yup.string().required("Robots are not welcome yet!")
-					: Yup.string(),
+			message: Yup.string().required("Message field is required")
+			
 		})}
 		onSubmit={async (
 			{ user_name, user_email, message },
@@ -100,18 +96,8 @@ const ContactForm = () => {
 				</InputField>
 				{values.name &&
 					values.email &&
-					values.message &&
-					process.env.NODE_ENV !== "development" && (
-						<InputField>
-							<FastField
-								component={Recaptcha}
-								sitekey={process.env.GATSBY_PORTFOLIO_RECAPTCHA_KEY}
-								name="recaptcha"
-								onChange={(value) => setFieldValue("recaptcha", value)}
-							/>
-							<ErrorMessage component={Error} name="recaptcha" />
-						</InputField>
-					)}
+					values.message
+					}
 				{values.success && (
 					<InputField>
 						<Center>

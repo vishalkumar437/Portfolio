@@ -9,14 +9,13 @@ import Footer from "./Components/Footer/index";
 function App() {
   const [activeComponent, setActiveComponent] = useState("landing");
   //const [isScrolled, setIsScrolled] = useState(false);
-
-
+  const [mode,setMode] = useState("light");
 
 
   return (
       <>
-        <LightParticle />
-        <Navbar setActiveComponent={setActiveComponent} />
+        <LightParticle mode={mode}/>
+        <Navbar setActiveComponent={setActiveComponent} setMode = {setMode}/>
           {activeComponent === "landing" && <Landing />}
           {activeComponent === "about" && <About />}
           {activeComponent === "contact" && <Contact />}
