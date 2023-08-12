@@ -61,7 +61,6 @@
 .Nav-toggle{
   display: flex;
   align-items: center;
-  margin-right: auto;
 }
 
 .Nav-logo {
@@ -96,7 +95,7 @@
   cursor: pointer;
   display: block;
   height: 60px;
-  margin-right: auto;
+  margin-left: auto;
   position: relative;
   width: 60px;
 }

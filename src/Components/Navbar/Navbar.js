@@ -62,12 +62,14 @@ const Navbar = ({ setActiveComponent, setMode }) => {
             size={80}
           />
         </div>
+        {window.innerWidth <767 && (
         <div className={`burger-icon ${isBurgerOpen ? 'open-burger' : 'closed-burger'}`}
           onClick={handleBurgerClick}>
           <span className="burger-bun-top"></span>
           <span className="burger-middle"></span>
           <span className="burger-bun-bottom"></span>
         </div>
+        )}
       </div>
     </>
   );
