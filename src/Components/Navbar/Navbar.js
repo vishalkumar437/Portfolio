@@ -6,9 +6,14 @@ import DarkModeToggle from 'react-dark-mode-toggle';
 
 const Navbar = ({ setActiveComponent, setMode }) => {
   const { toggle, toggleFunction } = React.useContext(ThemeContext);
+  const [isBurgerOpen, setIsBurgerOpen] = React.useState(false); // State to track the burger icon state
+
+  const handleBurgerClick = () => {
+    setIsBurgerOpen(!isBurgerOpen); // Toggle the state
+  };
   const handleNavLinkClick = (componentName) => {
     setActiveComponent(componentName);
-  };  
+  };
   React.useEffect(() => {
     console.log('Toggle value:', toggle); // Check if the value changes
     if (toggle) {
@@ -23,9 +28,8 @@ const Navbar = ({ setActiveComponent, setMode }) => {
   return (
     <>
       <div
-        className={`Nav-MainContainer ${
-          toggle ? 'dark-mode' : 'light-mode'
-        }`}
+        className={`Nav-MainContainer ${toggle ? 'dark-mode' : 'light-mode'
+          }`}
       >
         <a href="/">
           <img src={logo} alt="Vishal Kumar" className="Nav-logo" />
@@ -49,12 +53,20 @@ const Navbar = ({ setActiveComponent, setMode }) => {
           >
             Contact
           </div>
+        </div>
+        <div className='Nav-toggle'>
           {/* theme button */}
           <DarkModeToggle
             onChange={toggleFunction}
             checked={toggle}
             size={80}
           />
+        </div>
+        <div className={`burger-icon ${isBurgerOpen ? 'open-burger' : 'closed-burger'}`}
+          onClick={handleBurgerClick}>
+          <span className="burger-bun-top"></span>
+          <span className="burger-middle"></span>
+          <span className="burger-bun-bottom"></span>
         </div>
       </div>
     </>
