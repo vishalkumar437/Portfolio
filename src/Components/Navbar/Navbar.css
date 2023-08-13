@@ -40,8 +40,27 @@
 }
 
 @media (max-width: 767px) {
-  .Nav-Container{
+  .Nav-toggle{
+    margin-left: auto;
+  }
+  .Nav-Container {
+    position: fixed;
+    top: 100%; /* Initially move the menu off-screen */
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 10); /* Adjust background color as needed */
+    color: grey;
     flex-direction: column;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: top 0.3s ease; /* Add a transition for smooth animation */
+    z-index: 1000; /* Ensure the menu is above other content */
+  }
+  .Nav-Container div{
+    padding: 7px;
+  }
+  .Nav-Container.active.dark-mode{
+    background-color: black;
+    color: white;
   }
   }
 
@@ -95,9 +114,11 @@
   cursor: pointer;
   display: block;
   height: 60px;
-  margin-left: auto;
+  margin-left: 20px;
+  margin-right: 20px;
   position: relative;
   width: 60px;
+  z-index: 1001;
 }
 .burger-icon span {
   background-color: grey;

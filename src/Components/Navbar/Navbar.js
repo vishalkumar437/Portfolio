@@ -9,18 +9,18 @@ const Navbar = ({ setActiveComponent, setMode }) => {
   const [isBurgerOpen, setIsBurgerOpen] = React.useState(false); // State to track the burger icon state
 
   const handleBurgerClick = () => {
-    setIsBurgerOpen(!isBurgerOpen); // Toggle the state
+    setIsBurgerOpen(!isBurgerOpen);
   };
+
   const handleNavLinkClick = (componentName) => {
     setActiveComponent(componentName);
+    setIsBurgerOpen(false);
   };
+
   React.useEffect(() => {
-    console.log('Toggle value:', toggle); // Check if the value changes
     if (toggle) {
-      console.log('Adding dark mode class to body');
       document.body.classList.add('dark-mode');
     } else {
-      console.log('Removing dark mode class from body');
       document.body.classList.remove('dark-mode');
     }
   }, [toggle]);
@@ -28,12 +28,12 @@ const Navbar = ({ setActiveComponent, setMode }) => {
   return (
     <>
       <div
-        className={`Nav-MainContainer ${toggle ? 'dark-mode' : 'light-mode'
-          }`}
+        className={`Nav-MainContainer ${toggle ? 'dark-mode' : 'light-mode'}`}
       >
         <a href="/">
           <img src={logo} alt="Vishal Kumar" className="Nav-logo" />
         </a>
+        {window.innerWidth > 767 && (
         <div className="Nav-Container">
           <div
             onClick={() => handleNavLinkClick('landing')}
@@ -54,6 +54,7 @@ const Navbar = ({ setActiveComponent, setMode }) => {
             Contact
           </div>
         </div>
+        )}
         <div className='Nav-toggle'>
           {/* theme button */}
           <DarkModeToggle
@@ -62,13 +63,28 @@ const Navbar = ({ setActiveComponent, setMode }) => {
             size={80}
           />
         </div>
-        {window.innerWidth <767 && (
-        <div className={`burger-icon ${isBurgerOpen ? 'open-burger' : 'closed-burger'}`}
-          onClick={handleBurgerClick}>
-          <span className="burger-bun-top"></span>
-          <span className="burger-middle"></span>
-          <span className="burger-bun-bottom"></span>
-        </div>
+        {window.innerWidth < 767 && (
+          <div className={`burger-icon ${isBurgerOpen ? 'closed-burger' : 'open-burger'}`}
+            onClick={handleBurgerClick}>
+            <span className="burger-bun-top"></span>
+            <span className="burger-middle"></span>
+            <span className="burger-bun-bottom"></span>
+          </div>
+        )}
+
+        {/* Render menu contents when burger icon is open */}
+        {isBurgerOpen && (
+          <div className={`Nav-Container ${isBurgerOpen ? 'active' : ''} ${toggle ? 'dark-mode' : 'light-mode'}`}>
+            <div onClick={() => handleNavLinkClick('landing')} className="Nav-Link">
+              Home
+            </div>
+            <div onClick={() => handleNavLinkClick('about')} className="Nav-Link">
+              About
+            </div>
+            <div onClick={() => handleNavLinkClick('contact')} className="Nav-Link">
+              Contact
+            </div>
+          </div>
         )}
       </div>
     </>
