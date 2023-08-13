@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../../Assets/logo.png';
+import logoDark from '../../Assets/logoDark.png'
 import './Navbar.css';
 import { ThemeContext } from '../../context/context';
 import DarkModeToggle from 'react-dark-mode-toggle';
@@ -31,7 +32,7 @@ const Navbar = ({ setActiveComponent, setMode }) => {
         className={`Nav-MainContainer ${toggle ? 'dark-mode' : 'light-mode'}`}
       >
         <a href="/">
-          <img src={logo} alt="Vishal Kumar" className="Nav-logo" />
+          <img src={toggle?logoDark:logo} alt="Vishal Kumar" className="Nav-logo" />
         </a>
         {window.innerWidth > 767 && (
         <div className="Nav-Container">

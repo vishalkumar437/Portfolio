@@ -3,7 +3,7 @@
     "id": 0,
     "name": "Telegram",
     "link": "https://t.me/AliVe_MaN",
-    "icon": "static/icons/telegram.svg"
+    "icon": "/static/icons/telegram.svg"
   },
   {
     "id": 1,
