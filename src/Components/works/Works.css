@@ -12,6 +12,7 @@
     justify-content: space-around;
     padding:30px 0 0 45px; /* Add some spacing between cards */
     margin-right: 10px;
+    
 }
 
 .Works-cards {
@@ -25,10 +26,18 @@
     border-radius: 10px; /* Optional: Add some border radius for a rounded look */
     transition: all .7s ease-in-out;
     overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 .Works-cards:hover{
     transform: scale(1.1);
 }
+
+@media (max-width: 767px) {
+    .Works-cardsContainer{
+        flex-direction: column;
+        padding: 20px;
+    }
+  }
 
 .Works-image {
     padding-top: 20px;

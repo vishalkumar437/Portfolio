@@ -24,7 +24,6 @@
   display: flex;
   justify-content: space-between;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  z-index: 999;
   opacity: 1;
   animation: fadeIn 1s ease-in-out forwards;
 }
@@ -43,12 +42,15 @@
   .Nav-toggle{
     margin-left: auto;
   }
+  .Nav-MainContainer{
+    z-index: 1000;
+  }
   .Nav-Container {
     position: fixed;
     top: 100%; /* Initially move the menu off-screen */
     left: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 10); /* Adjust background color as needed */
+    background-color: rgba(255, 255, 255, 0.779); /* Adjust background color as needed */
     color: grey;
     flex-direction: column;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -59,7 +61,7 @@
     padding: 7px;
   }
   .Nav-Container.active.dark-mode{
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.8);
     color: white;
   }
   }

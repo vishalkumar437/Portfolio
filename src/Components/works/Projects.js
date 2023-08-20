@@ -28,6 +28,7 @@ const Project = [
     {
       title: "Animal Detection",
       image: animal,
+      tech:" Python , YOLO, OPENCV, tKinter",
       content: "We have used YOLOv3 Algorithm to track animals that have infiltrated farm and vandalizing crop and also inform farmer if animals are detected and provide necessary actions to scare away animals.",
       github:"https://github.com/vishalkumar437/ObjectDetection"
     },
