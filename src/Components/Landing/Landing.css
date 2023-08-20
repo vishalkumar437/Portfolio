@@ -59,6 +59,10 @@
     font-family: nothing;
     src: url("../../Assets/nothing.ttf");
 }
+@font-face {
+  font-family: type;
+  src: url("../../Assets/type.ttf");
+}
 
 .Landing-sectionA{
     display: flex;
@@ -97,12 +101,13 @@
 
 .Typewriter__wrapper {
   font-size: 2.2em !important;
-  color: #14ffec !important;
   font-weight: 600 !important;
+  font-family: type;
+  color: #14ffec;
 }
 .Typewriter__cursor {
   font-size: 2.4em !important;
-  color: #14ffec !important;
+  color: #14ffec;
 }
 
 @media (max-width: 767px) {

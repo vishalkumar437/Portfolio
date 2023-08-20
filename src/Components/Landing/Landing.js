@@ -17,7 +17,7 @@ function Landing(){
                 <strong className="main-name"> VISHAL</strong>
               </h1>
 
-            <div style={{color : "#14ffec", padding: 50, textAlign: "left", fontWeight:"bolder" }}>
+            <div className='type' style={{ padding: 42 }}>
               <Type/>
             </div>
             

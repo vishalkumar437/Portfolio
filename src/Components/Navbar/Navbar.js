@@ -38,21 +38,27 @@ const Navbar = ({ setActiveComponent, setMode }) => {
         <div className="Nav-Container">
           <div
             onClick={() => handleNavLinkClick('landing')}
-            className={`Nav-Link ${toggle ? 'dark-mode' : 'light-mode'}`}
+            className="Nav-Link"
           >
             Home
           </div>
           <div
             onClick={() => handleNavLinkClick('about')}
-            className={`Nav-Link ${toggle ? 'dark-mode' : 'light-mode'}`}
+            className="Nav-link"
           >
             About
           </div>
           <div
             onClick={() => handleNavLinkClick('contact')}
-            className={`Nav-Link ${toggle ? 'dark-mode' : 'light-mode'}`}
+            className="Nav-Link"
           >
             Contact
+          </div>
+          <div
+            onClick={() => handleNavLinkClick('works')}
+            className="Nav-Link"
+          >
+            My Works
           </div>
         </div>
         )}
@@ -84,6 +90,9 @@ const Navbar = ({ setActiveComponent, setMode }) => {
             </div>
             <div onClick={() => handleNavLinkClick('contact')} className="Nav-Link">
               Contact
+            </div>
+            <div onClick={() => handleNavLinkClick('works')} className="Nav-Link">
+              My Works
             </div>
           </div>
         )}

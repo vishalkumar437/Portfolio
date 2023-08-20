@@ -1,12 +1,8 @@
-@font-face {
-    font-family: nothing;
-    src: url("../../Assets/nothing.ttf");
-}
 
 .Contact-head{
-    margin-top: 19vh;
-    padding-left: 10vw;
-    font-family: nothing;
+    margin-top: 20vh;
+    font-family: type;
+    margin-left: 7vw;
     font-weight: bold;
 }
 
