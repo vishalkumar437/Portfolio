@@ -9,10 +9,7 @@ import Works from "./Components/works/Works";
 
 function App() {
   const [activeComponent, setActiveComponent] = useState("landing");
-  //const [isScrolled, setIsScrolled] = useState(false);
   const [mode, setMode] = useState("light");
-
-
   return (
     <>
       <LightParticle mode={mode} />

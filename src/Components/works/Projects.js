@@ -1,8 +1,20 @@
 import reactpoll from "../../Assets/reactpoll.png";
 import audio from "../../Assets/audio.png";
 import chit from "../../Assets/chit.jpg";
-import animal from "../../Assets/animal.png"
+import animal from "../../Assets/animal.png";
+import ticket from "../../Assets/ticket.png";
+import depress from "../../Assets/depress.png"
+import shopit from "../../Assets/shopit.png";
 const Project = [
+  
+  {
+      title: "ShopIt",
+      image:shopit,
+      content: "Facilitating users’ logins to websites as a Seller or Buyer.Sellers can add Products with details and images. Buyers or users can browse through different categories of projects and add them to cart. ",
+      tech:"NextJs, Material UI, Node.js, Express.js, MongoDB",
+      live:"https://shop-it-ten.vercel.app",
+      github:"https://github.com/vishalkumar437/shopit"
+    },
     {
       title: "ReactPoll",
       image:reactpoll,
@@ -33,12 +45,18 @@ const Project = [
       github:"https://github.com/vishalkumar437/ObjectDetection"
     },
     {
-      title: "Card Title 4",
-      content: "Some quick example text for Card 2.",
+      title: "Railway Ticket Confirmation",
+      image: ticket,
+      content: "Using Machine learning models this project can predict if a railway ticket will get confirm or not. If it will what is the probability.",
+      github:"https://github.com/vishalkumar437/ticketPrediction",
+      tech:"Python, Pandas, tensorflow, keras, Flask",
     },
     {
-      title: "Card Title 5",
-      content: "Some quick example text for Card 2.",
+      title: "Depression Chatbot",
+      image:depress,
+      content: "Depression Chatbot using machine learning and natural language Processing",
+      github:"https://github.com/vishalkumar437/depress",
+      tech:"Python, nltk, tensorflow, FLask"
     },
     // Add more objects as needed
   ];

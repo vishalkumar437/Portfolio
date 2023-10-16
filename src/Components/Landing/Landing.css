@@ -70,6 +70,7 @@
     flex-direction: column;
     justify-content: center; 
     font-family: nothing;
+    min-width: 650px;
 }
 
 .Landing-imgContainer{
@@ -116,7 +117,11 @@
     font-weight: 600 !important;
     position: absolute !important;
   }
+  .Landing-sectionA{
+    min-width: 0px;
+  }
   .Typewriter__cursor {
     display: none !important;
   }
 }
+
