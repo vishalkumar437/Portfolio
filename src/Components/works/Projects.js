@@ -21,7 +21,7 @@ const Project = [
       content: "WebApp for polling for surveys Facilitating users logins to websites without having to remember their credentials Users can create, vote, share",
       tech:"Reactjs, CSS, Node.js, Express.js, MongoDB",
       live:"https://reactpolldv.netlify.app",
-      github:"https://github.com/vishalkumar437/reactpoll"
+      github:"https://github.com/vishalkumar437/reactPollBackend"
     },
     {
       title: "ChitChat",
