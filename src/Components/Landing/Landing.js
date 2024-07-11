@@ -22,7 +22,7 @@ function Landing() {
           </div>
           <div className='frame'>
             <a
-              href="https://drive.google.com/file/d/1Tz5Da0T_Km7O4NfQMAdVYxPGaffDk_Sq/view?usp=sharing"
+              href="https://drive.google.com/file/d/1iOyqZ8ac3OasUUJhu-H_OZQB5CgFQ5Yp/view?usp=sharing"
               download="Vishal Kumar Gupta"
               target="_blank"
               rel="noreferrer">
